@@ -1,1 +1,3 @@
-require("fuu.set")
+require('fuu.set')
+require('fuu.lualine')
+
