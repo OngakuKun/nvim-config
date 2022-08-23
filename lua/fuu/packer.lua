@@ -1,9 +1,17 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
+    --  PACKER NVIM
     use 'wbthomason/packer.nvim'
+
+    --  NVIM THEME
     use 'projekt0n/github-nvim-theme'
+    use 'briones-gabriel/darcula-solid.nvim'
+    use 'folke/tokyonight.nvim'
+
+    --  NVIM LSP-CONFIG
     use 'neovim/nvim-lspconfig'
+
     --  NVIM LUALINE
     use 
     { 
@@ -14,12 +22,14 @@ return require('packer').startup(function()
             opt = true 
         }
     }
+
     --  LEWIS GITSIGNS
     use 
     { 
         'lewis6991/gitsigns.nvim', 
         config = function() require('gitsigns').setup() end
     }
+
     --  NVIM TELESCOPE
     use 
     { 
